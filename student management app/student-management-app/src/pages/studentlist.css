@@ -1,0 +1,59 @@
+.toolbar { display: flex; gap: 1rem; align-items: center; justify-content: space-between; margin-top: 0.5rem; }
+
+.toolbar .search input {
+  padding: 0.6rem 0.8rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.04);
+  background: rgba(255,255,255,0.02);
+  color: var(--text);
+  width: 320px;
+}
+
+.toolbar .meta { display: flex; gap: 0.75rem; align-items: center; }
+
+.count { color: var(--muted); font-weight: 700; }
+
+.table-wrapper { overflow-x: auto; }
+
+.table { width: 100%; border-collapse: collapse; min-width: 720px; }
+.table thead th {
+  text-align: left; padding: 0.9rem 0.6rem; font-size: 0.9rem; color: var(--muted); border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.table tbody td { padding: 0.75rem 0.6rem; border-bottom: 1px solid rgba(255,255,255,0.03); vertical-align: middle; }
+
+.table tbody tr:nth-child(even) { background: rgba(255,255,255,0.01); }
+.table tbody tr:hover { background: rgba(37,99,235,0.03); }
+
+.action { text-align: right; width: 1%; }
+.action-col { width: 1%; }
+
+.delete-btn {
+  --danger-color: var(--danger);
+  background: linear-gradient(90deg, var(--danger), #c22b2b);
+  color: white;
+  border: none;
+  padding: 0.35rem 0.6rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(239,68,68,0.12);
+}
+.delete-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 26px rgba(239,68,68,0.18); }
+.delete-btn:active { transform: translateY(0); }
+
+.muted { color: var(--muted); }
+
+@media (max-width: 920px) {
+  .toolbar { flex-direction: column; align-items: stretch; gap: 0.5rem; }
+  .toolbar .search input { width: 100%; }
+  .table { min-width: 560px; }
+}
+
+@media (max-width: 520px) {
+  .table { min-width: 100%; }
+  .table thead { display: none; }
+  .table tbody td { display: block; padding: 0.6rem 0.8rem; }
+  .table tbody tr { margin-bottom: 0.6rem; display: block; border-radius: 10px; background: var(--card); padding: 0.4rem; }
+  .action { text-align: left; margin-top: 0.5rem; }
+  .action .delete-btn { width: 100%; }
+}

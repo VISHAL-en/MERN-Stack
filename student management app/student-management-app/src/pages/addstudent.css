@@ -1,0 +1,7 @@
+.add-student { max-width: 720px; }
+.add-student form { display: grid; gap: 0.75rem; }
+.add-student label { display: block; font-weight: 600; color: var(--muted); }
+.add-student input { padding: 0.6rem 0.75rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.04); background: rgba(255,255,255,0.02); color: var(--text); }
+.add-student .row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+.add-student .actions { margin-top: 0.5rem; display:flex; gap:0.5rem; }
+.add-student .help { color: var(--muted); font-size: 0.9rem; }
