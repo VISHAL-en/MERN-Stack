@@ -1,3 +1,2 @@
 # MERN-Stack
-First Pull
-Cloned this already and am making changes nowww
+My first github project student management app
